@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Overtime Calculator</title>
+</head>
+
+<body>
+    <div class="container p-2">
+        <header class="text-center">
+            <h1>Calculate Overtime</h1>
+        </header>
+        <div class="d-flex justify-content-center col-auto">
+            <!-- unicode for naira &#x20A6 -->
+            <div class="card border-0 shadow p-3 mb-5 bg-body rounded-3">
+                <div class="card-header" id="otDisplay">
+                    <p class="card-title fw-bold">Overtime amount: <span id="otAmount"></span></p>
+                </div>
+                <div class="card-body">
+
+                    <form action="" id="formOT">
+                        <div class="mb-3">
+                            <label for="otDay" class="form-label">Days Worked</label>
+                            <input type="number" class="form-control" id="otDay">
+                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="otBasic" class="form-label">Basic Salary</label>
+                            <div class="input-group">
+                                <span class="input-group-text">₦</span>
+                                <input type="number" class="form-control" aria-label="BasicSalary"
+                                    aria-describedby="otBasic" id="otBasic">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center"><button class="btn btn-primary">Calculate</button>
+                        </div>
+
+                    </form>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="ot.js"></script>
+    <script src="autoMonth.js"></script>
+</body>
+
+</html>
