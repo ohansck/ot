@@ -3,6 +3,7 @@ const otBasic = document.querySelector('#otBasic');
 const otDay = document.querySelector('#otDay');
 const otAmount = document.querySelector('#otAmount');
 const otDisplay = document.querySelector('#otDisplay');
+const leave = document.querySelector('#leave');
 
 let hrs = 0;
 let ot = 0;
@@ -26,18 +27,16 @@ function calcOT(workDays, basicSalary, calcOtAmount, leaveDays = 0) {
         otAmount.textContent = formatter.format(ot).toString();
     } else {
         otAmount.innerHTML = '&#x20A6 0';
-        console.log('amount not ggreater than zero');
+        console.log('amount not greater than zero');
     }
 
 }
-let leaveDay = formOT.elements.leave.valueAsNumber;
-let workDays = otDay.valueAsNumber - formOT.elements.leave.valueAsNumber;
+
 formOT.addEventListener('submit', function (e) {
     console.log(parseInt(formOT.elements.otBasic.value));
     console.log(otBasic.valueAsNumber);
     console.log(otDay.valueAsNumber);
-    //let leave = formOT.elements.leave.value;
-    calcOT(workDays, otBasic.valueAsNumber, calcOtAmount, leaveDay);
+    calcOT((otDay.valueAsNumber - leave.valueAsNumber), otBasic.valueAsNumber, calcOtAmount, leave.valueAsNumber);
     otDisplay.hidden = false;
     e.preventDefault();
     otDay.value = "";
