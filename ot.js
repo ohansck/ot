@@ -4,6 +4,7 @@ const otDay = document.querySelector('#otDay');
 const otAmount = document.querySelector('#otAmount');
 const otDisplay = document.querySelector('#otDisplay');
 const leave = document.querySelector('#leave');
+leave.defaultValue = 0;
 
 let hrs = 0;
 let ot = 0;
