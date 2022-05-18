@@ -37,6 +37,10 @@ formOT.addEventListener('submit', function (e) {
     console.log(parseInt(formOT.elements.otBasic.value));
     console.log(otBasic.valueAsNumber);
     console.log(otDay.valueAsNumber);
+    
+    if (!leave.valueAsNumber) {
+        leave.valueAsNumber = 0;
+    }
     calcOT((otDay.valueAsNumber - leave.valueAsNumber), otBasic.valueAsNumber, calcOtAmount, leave.valueAsNumber);
     otDisplay.hidden = false;
     e.preventDefault();
