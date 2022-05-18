@@ -30,14 +30,14 @@ function calcOT(workDays, basicSalary, calcOtAmount, leaveDays = 0) {
     }
 
 }
-let leaveDays = formOT.elements.leave.value;
-let workDays = otDay.valueAsNumber - formOT.elements.leave.value;
+let leaveDay = formOT.elements.leave.valueAsNumber;
+let workDays = otDay.valueAsNumber - formOT.elements.leave.valueAsNumber;
 formOT.addEventListener('submit', function (e) {
     console.log(parseInt(formOT.elements.otBasic.value));
     console.log(otBasic.valueAsNumber);
     console.log(otDay.valueAsNumber);
-    let leave = formOT.elements.leave.value;
-    calcOT(workDays, otBasic.valueAsNumber, calcOtAmount, leaveDays);
+    //let leave = formOT.elements.leave.value;
+    calcOT(workDays, otBasic.valueAsNumber, calcOtAmount, leaveDay);
     otDisplay.hidden = false;
     e.preventDefault();
     otDay.value = "";
