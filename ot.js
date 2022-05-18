@@ -41,7 +41,7 @@ formOT.addEventListener('submit', function (e) {
     e.preventDefault();
     otDay.value = "";
     otBasic.value = "";
-    formOT.elements.leave.value = "";
+    formOT.leave.value = "";
 
 })
 
