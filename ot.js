@@ -42,7 +42,7 @@ formOT.addEventListener('submit', function (e) {
     otDay.value = "";
     otBasic.value = "";
     leave = '';
-    //formOT.elements.otBasic.value = 87900;
+    formOT.elements.otBasic.value = '';
 
 })
 
